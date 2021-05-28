@@ -76,7 +76,7 @@ import TTLocalizer
 from otp.otpbase import OTPGlobals
 OTPGlobals.setDefaultProductPrefix(TTLocalizer.ProductPrefix)
 if base.musicManagerIsValid:
-    music = base.musicManager.getSound('phase_3/audio/bgm/tt_theme.ogg')
+    music = base.musicManager.getSound('phase_3/audio/bgm/tt_theme_new.ogg')
     if music:
         music.setLoop(1)
         music.setVolume(0.9)

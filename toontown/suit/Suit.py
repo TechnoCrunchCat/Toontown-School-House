@@ -77,7 +77,8 @@ tbc = (('cigar-smoke', 'cigar-smoke', 8),
 cc = (('speak', 'speak', 5),
  ('glower', 'glower', 5),
  ('phone', 'phone', 3.5),
- ('finger-wag', 'finger-wag', 5))
+ ('finger-wag', 'finger-wag', 5),
+ ('watercooler', 'watercooler', 5))
 tm = (('speak', 'speak', 5),
  ('throw-paper', 'throw-paper', 5),
  ('pickpocket', 'pickpocket', 5),
@@ -149,7 +150,8 @@ bw = (('finger-wag', 'fingerwag', 5),
  ('gavel', 'gavel', 8),
  ('magic1', 'magic1', 5),
  ('throw-object', 'throw-object', 5),
- ('throw-paper', 'throw-paper', 5))
+ ('throw-paper', 'throw-paper', 5),
+ ('golf-club-swing', 'golf-club-swing', 5))
 if not base.config.GetBool('want-new-cogs', 0):
     ModelDict = {'a': ('/models/char/suitA-', 4),
      'b': ('/models/char/suitB-', 4),
@@ -408,12 +410,12 @@ class Suit(Avatar.Avatar):
         self.loseActor = None
         self.isSkeleton = 0
         if dna.name == 'f':
-            self.scale = 4.0 / cSize
-            self.handColor = SuitDNA.corpPolyColor
-            self.generateBody()
-            self.generateHead('flunky')
-            self.generateHead('glasses')
-            self.setHeight(4.88)
+            self.scale = 4.0 / cSize #percived height (visual)
+            self.handColor = SuitDNA.corpPolyColor #Hand color
+            self.generateBody() #literally just
+            self.generateHead('flunky') #Primary head model
+            self.generateHead('glasses') #Secondary head model (Places directly over the first
+            self.setHeight(4.88) # Nametag/actual height (not visual)
         elif dna.name == 'p':
             self.scale = 3.35 / bSize
             self.handColor = SuitDNA.corpPolyColor
@@ -427,11 +429,11 @@ class Suit(Avatar.Avatar):
             self.generateHead('yesman')
             self.setHeight(5.28)
         elif dna.name == 'mm':
-            self.scale = 2.5 / cSize
+            self.scale = 1.5 / cSize
             self.handColor = SuitDNA.corpPolyColor
             self.generateBody()
             self.generateHead('micromanager')
-            self.setHeight(3.25)
+            self.setHeight(2.00)
         elif dna.name == 'ds':
             self.scale = 4.5 / bSize
             self.handColor = SuitDNA.corpPolyColor
@@ -446,7 +448,7 @@ class Suit(Avatar.Avatar):
             self.setHeight(7.45)
         elif dna.name == 'cr':
             self.scale = 6.75 / cSize
-            self.handColor = VBase4(0.85, 0.55, 0.55, 1.0)
+            self.handColor = VBase4(0.85, 0.55, 0.55, 1.0) #custom hand color
             self.generateBody()
             self.headTexture = 'corporate-raider.jpg'
             self.generateHead('flunky')
@@ -510,11 +512,11 @@ class Suit(Avatar.Avatar):
             self.generateHead('bigwig')
             self.setHeight(8.69)
         elif dna.name == 'sc':
-            self.scale = 3.6 / cSize
+            self.scale = 2.5 / cSize
             self.handColor = SuitDNA.moneyPolyColor
             self.generateBody()
             self.generateHead('coldcaller')
-            self.setHeight(4.77)
+            self.setHeight(3.00)
         elif dna.name == 'pp':
             self.scale = 3.55 / aSize
             self.handColor = VBase4(1.0, 0.5, 0.6, 1.0)

@@ -444,3 +444,4 @@
 432*8*zapper
 433*8*zilla
 434*8*zoom
+435*8*berserk
