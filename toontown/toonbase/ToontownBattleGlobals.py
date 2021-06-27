@@ -119,7 +119,7 @@ def gagIsVelvetRoped(track, level):
 MaxToonAcc = 95
 StartingLevel = 0
 CarryLimits = (((10,
-   0,
+   0, #Toon-up
    0,
    0,
    0,
@@ -167,7 +167,7 @@ CarryLimits = (((10,
    7,
    3,
    1)),
- ((5,
+ ((5, #Trap
    0,
    0,
    0,
@@ -207,16 +207,16 @@ CarryLimits = (((10,
    15,
    10,
    5,
-   2,
+   3,
    0),
-  (20,
+  (30,
+   25,
+   20,
    15,
-   15,
-   10,
-   5,
-   2,
+   7,
+   3,
    1)),
- ((10,
+ ((10, #LURE
    0,
    0,
    0,
@@ -265,7 +265,7 @@ CarryLimits = (((10,
    7,
    3,
    1)),
- ((10,
+ ((10, #Sound
    0,
    0,
    0,
@@ -314,7 +314,7 @@ CarryLimits = (((10,
    7,
    3,
    1)),
- ((10,
+ ((10, #Throw
    0,
    0,
    0,
@@ -363,44 +363,44 @@ CarryLimits = (((10,
    7,
    3,
    1)),
- ((10,
+ ((10 , #Squirt #15
    0,
    0,
    0,
    0,
    0,
    0),
-  (10,
-   5,
+  (10, #15
+   5, #10
    0,
    0,
    0,
    0,
    0),
-  (15,
-   10,
-   5,
+  (15, #20
+   10, #15
+   5, #10
    0,
    0,
    0,
    0),
-  (20,
-   15,
-   10,
-   5,
+  (20, #25
+   25, #20
+   10, #15
+   5, #10
    0,
    0,
    0),
-  (25,
-   20,
-   15,
-   10,
-   3,
+  (25, #30
+   20, #25
+   15, #20
+   10, #15
+   3, #5
    0,
    0),
-  (30,
-   25,
-   20,
+  (30, #30
+   25, #25
+   20, #
    15,
    7,
    3,
@@ -412,7 +412,7 @@ CarryLimits = (((10,
    7,
    3,
    1)),
- ((10,
+ ((10, #Drop
    0,
    0,
    0,
@@ -686,21 +686,21 @@ AvPropDamage = ((((8, 10), (Levels[0][0], Levels[0][1])),
   ((180, 180), (Levels[6][6], MaxSkill))))
 ATK_SINGLE_TARGET = 0
 ATK_GROUP_TARGET = 1
-AvPropTargetCat = ((ATK_SINGLE_TARGET,
+AvPropTargetCat = ((ATK_SINGLE_TARGET,  #Toon-up attack targeting
   ATK_GROUP_TARGET,
   ATK_SINGLE_TARGET,
   ATK_GROUP_TARGET,
   ATK_SINGLE_TARGET,
   ATK_GROUP_TARGET,
   ATK_GROUP_TARGET),
- (ATK_SINGLE_TARGET,
+ (ATK_SINGLE_TARGET, #
   ATK_SINGLE_TARGET,
   ATK_SINGLE_TARGET,
   ATK_SINGLE_TARGET,
   ATK_SINGLE_TARGET,
   ATK_SINGLE_TARGET,
   ATK_SINGLE_TARGET),
- (ATK_GROUP_TARGET,
+ (ATK_GROUP_TARGET, #Sound Attack targeting
   ATK_GROUP_TARGET,
   ATK_GROUP_TARGET,
   ATK_GROUP_TARGET,

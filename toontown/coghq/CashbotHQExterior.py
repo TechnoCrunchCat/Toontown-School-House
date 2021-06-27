@@ -41,12 +41,27 @@ class CashbotHQExterior(CogHQExterior.CogHQExterior):
                 train = Train.Train(track['start'], track['end'], self.TrainTracks.index(track), len(self.TrainTracks))
                 self.trains.append(train)
 
+        self.trainprop1 = loader.loadModel('phase_10/models/cogHQ/CashBotFlatCar')
+        self.trainprop1.reparentTo(render)
+        self.trainprop1.setPosHpr(355.528, -417.239, -23.439, -90, 0, 0)
+        #self.trainprop1.setHpr()
+        self.trainprop1.setScale(.5)
+        self.trainprop1.setColorScale(0.5,0,0,1) #maxium value is 1 divide by 255 = /255
+        #self.trainprop.hide() Hides object but it's still there
+        #self.trainprop.show() reveals
+
+
+
     def unload(self):
         CogHQExterior.CogHQExterior.unload(self)
         for train in self.trains:
             train.delete()
 
         self.trains = None
+
+        self.trainprop1.removeNode()
+        del self.trainprop1
+
         return
 
     def enter(self, requestStatus):

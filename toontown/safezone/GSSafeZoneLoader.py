@@ -16,8 +16,8 @@ class GSSafeZoneLoader(SafeZoneLoader):
 
     def __init__(self, hood, parentFSM, doneEvent):
         SafeZoneLoader.__init__(self, hood, parentFSM, doneEvent)
-        self.musicFile = 'phase_6/audio/bgm/GS_SZ.ogg'
-        self.activityMusicFile = 'phase_6/audio/bgm/GS_KartShop.ogg'
+        self.musicFile = 'phase_6/audio/bgm/Toontown - Goofy Speedway.ogg'
+        self.activityMusicFile = 'phase_6/audio/bgm/Goofy Speedway - Kart Shop.ogg'
         self.dnaFile = 'phase_6/dna/goofy_speedway_sz.dna'
         self.safeZoneStorageDNAFile = 'phase_6/dna/storage_GS_sz.dna'
         del self.fsm

@@ -3072,6 +3072,16 @@ SuitAttackTaunts = {'Audit': ["I believe your books don't balance.",
                 'Your finances have taken a decline.',
                 'I foresee a definite downturn.',
                 "It's a reversal of fortune."],
+ 'ThrowBook':  ["TESTReplacethislinewithsomethingbetterTEST",
+                'TESTReplacethislinewithsomethingbetterTEST',
+                'TESTReplacethislinewithsomethingbetterTEST',
+                'TESTReplacethislinewithsomethingbetterTEST',
+                "TESTReplacethislinewithsomethingbetterTEST",
+                "TESTReplacethislinewithsomethingbetterTEST",
+                "TESTReplacethislinewithsomethingbetterTEST",
+                'TESTReplacethislinewithsomethingbetterTEST',
+                'TESTReplacethislinewithsomethingbetterTEST',
+                "TESTReplacethislinewithsomethingbetterTEST"],
  'WriteOff': ['Let me increase your losses.',
               "Let's make the best of a bad deal.",
               'Time to balance the books.',
@@ -4145,7 +4155,7 @@ AvatarChoiceNameReview = 'Under\nReview'
 AvatarChoiceNameYourToon = 'Name\nYour Toon!'
 AvatarChoiceDeletePasswordText = 'Careful! This will delete %s forever.  To delete this Toon, enter your password.'
 AvatarChoiceDeleteConfirmText = 'Careful! This will delete %(name)s forever.  If you are sure you want to do this, type "%(confirm)s" and click OK.'
-AvatarChoiceDeleteConfirmUserTypes = 'delete'
+AvatarChoiceDeleteConfirmUserTypes = '123'
 AvatarChoiceDeletePasswordTitle = 'Delete Toon?'
 AvatarChoicePassword = 'Password'
 AvatarChoiceDeletePasswordOK = lOK

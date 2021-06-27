@@ -16,7 +16,7 @@ bSize = 5.29
 cSize = 4.14
 SuitDialogArray = []
 SkelSuitDialogArray = []
-AllSuits = (('walk', 'walk'), ('run', 'walk'), ('neutral', 'neutral'))
+AllSuits = (('walk', 'walk'), ('run', 'walk'), ('neutral', 'neutral'))   #All these values are animation states for cogs in different environments
 AllSuitsMinigame = (('victory', 'victory'),
  ('flail', 'flailing'),
  ('tug-o-war', 'tug-o-war'),
@@ -74,10 +74,11 @@ tbc = (('cigar-smoke', 'cigar-smoke', 8),
  ('glower', 'glower', 5),
  ('song-and-dance', 'song-and-dance', 8),
  ('golf-club-swing', 'golf-club-swing', 5))
-cc = (('speak', 'speak', 5),
- ('glower', 'glower', 5),
- ('phone', 'phone', 3.5),
- ('finger-wag', 'finger-wag', 5),
+cc = (('speak', 'speak', 5), #5
+ ('glower', 'glower', 5), #5
+ ('phone', 'phone', 3.5), #3.5
+ ('finger-wag', 'finger-wag', 5),  #5
+ ('shredder', 'shredder', 3.5),
  ('watercooler', 'watercooler', 5))
 tm = (('speak', 'speak', 5),
  ('throw-paper', 'throw-paper', 5),
@@ -254,7 +255,8 @@ def loadDialog(level):
         SuitDialogFiles = ['COG_VO_grunt',
          'COG_VO_murmur',
          'COG_VO_statement',
-         'COG_VO_question']
+         'COG_VO_question',
+         'COG_VO_exclaim'] #Currently using Test SFX
         for file in SuitDialogFiles:
             SuitDialogArray.append(base.loader.loadSfx(loadPath + file + '.ogg'))
 
@@ -271,12 +273,15 @@ def loadSkelDialog():
         murmur = loader.loadSfx('phase_5/audio/sfx/Skel_COG_VO_murmur.ogg')
         statement = loader.loadSfx('phase_5/audio/sfx/Skel_COG_VO_statement.ogg')
         question = loader.loadSfx('phase_5/audio/sfx/Skel_COG_VO_question.ogg')
+        exclaim = loader.loadSfx('phase_5/audio/sfx/Skel_COG_VO_exclaim.ogg') #Currently using Test SFX
         SkelSuitDialogArray = [grunt,
          murmur,
          statement,
          question,
          statement,
+         exclaim,
          statement]
+
 
 
 def unloadDialog(level):
@@ -409,16 +414,16 @@ class Suit(Avatar.Avatar):
         self.headTexture = None
         self.loseActor = None
         self.isSkeleton = 0
-        if dna.name == 'f':
-            self.scale = 4.0 / cSize #percived height (visual)
-            self.handColor = SuitDNA.corpPolyColor #Hand color
-            self.generateBody() #literally just
-            self.generateHead('flunky') #Primary head model
-            self.generateHead('glasses') #Secondary head model (Places directly over the first
-            self.setHeight(4.88) # Nametag/actual height (not visual)
+        if dna.name == 'f':                #Note to self: All cogs are repersented in these values, generateheaed refers to the head model they use, some reuse other cog's head models like for example short change uses the Cold caller head
+            self.scale = 4.0 / cSize #This relates to the actual size of the cog (self.scale = 4.0) and the body type (c/size)
+            self.handColor = SuitDNA.corpPolyColor #This relates to the color of the cog's hands
+            self.generateBody() #
+            self.generateHead('flunky') #This relates to the head model type which generates on the body of the cog
+            self.generateHead('glasses') #This possiblely relates to a secondary head model type which will also generate on the body of the cog, possibly layering itself ontop of the first head model
+            self.setHeight(4.88) #This value relates to the perceived head size, this doesn't actually increase the size of the head, it instead lowers or raises the nametag of the cog Research more
         elif dna.name == 'p':
             self.scale = 3.35 / bSize
-            self.handColor = SuitDNA.corpPolyColor
+            self.handColor = SuitDNA.legalPolyColor
             self.generateBody()
             self.generateHead('pencilpusher')
             self.setHeight(5.0)
@@ -433,7 +438,7 @@ class Suit(Avatar.Avatar):
             self.handColor = SuitDNA.corpPolyColor
             self.generateBody()
             self.generateHead('micromanager')
-            self.setHeight(2.00)
+            self.setHeight(2.25)
         elif dna.name == 'ds':
             self.scale = 4.5 / bSize
             self.handColor = SuitDNA.corpPolyColor
@@ -448,14 +453,15 @@ class Suit(Avatar.Avatar):
             self.setHeight(7.45)
         elif dna.name == 'cr':
             self.scale = 6.75 / cSize
-            self.handColor = VBase4(0.85, 0.55, 0.55, 1.0) #custom hand color
+            self.handColor = VBase4(0.85, 0.55, 0.55, 1.0)
             self.generateBody()
             self.headTexture = 'corporate-raider.jpg'
             self.generateHead('flunky')
             self.setHeight(8.23)
         elif dna.name == 'tbc':
             self.scale = 7.0 / aSize
-            self.handColor = VBase4(0.75, 0.95, 0.75, 1.0)
+            self.handColor = VBase4(0.72, 0.69, 0.07, 1.0)
+            self.headColor = VBase4(0.72, 0.69, 0.07, 1.0)
             self.generateBody()
             self.generateHead('bigcheese')
             self.setHeight(9.34)
@@ -512,11 +518,11 @@ class Suit(Avatar.Avatar):
             self.generateHead('bigwig')
             self.setHeight(8.69)
         elif dna.name == 'sc':
-            self.scale = 2.5 / cSize
+            self.scale = 2.6 / cSize
             self.handColor = SuitDNA.moneyPolyColor
             self.generateBody()
             self.generateHead('coldcaller')
-            self.setHeight(3.00)
+            self.setHeight(3.67)
         elif dna.name == 'pp':
             self.scale = 3.55 / aSize
             self.handColor = VBase4(1.0, 0.5, 0.6, 1.0)
@@ -561,7 +567,7 @@ class Suit(Avatar.Avatar):
             self.generateHead('yesman')
             self.setHeight(8.95)
         elif dna.name == 'cc':
-            self.scale = 3.5 / cSize
+            self.scale =  3.5 / cSize
             self.handColor = VBase4(0.55, 0.65, 1.0, 1.0)
             self.headColor = VBase4(0.25, 0.35, 1.0, 1.0)
             self.generateBody()
