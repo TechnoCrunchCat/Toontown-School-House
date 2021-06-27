@@ -1,3 +1,5 @@
+import random
+
 from toontown.coghq.SpecImports import *
 GlobalEntities = {1000: {'type': 'levelMgr',
         'name': 'LevelMgr',
@@ -28,7 +30,7 @@ GlobalEntities = {1000: {'type': 'levelMgr',
          'pos': Point3(63.9741363525, -10.9343223572, 9.97696113586),
          'hpr': Vec3(270.0, 0.0, 0.0),
          'scale': Vec3(1.0, 1.0, 1.0),
-         'rewardPerGrab': 8,
+         'rewardPerGrab': random.choice([7, 8, 9, 10, 11, 12, 13, 14]),
          'rewardPerGrabMax': 0},
  10010: {'type': 'healBarrel',
          'name': 'copy of <unnamed>',
@@ -37,7 +39,7 @@ GlobalEntities = {1000: {'type': 'levelMgr',
          'pos': Point3(0.0, 0.0, 4.13999986649),
          'hpr': Vec3(349.358764648, 0.0, 0.0),
          'scale': Vec3(1.0, 1.0, 1.0),
-         'rewardPerGrab': 8,
+         'rewardPerGrab': random.choice([7, 8, 9, 10, 11, 12, 13, 14]),
          'rewardPerGrabMax': 0},
  10000: {'type': 'nodepath',
          'name': 'mixers',

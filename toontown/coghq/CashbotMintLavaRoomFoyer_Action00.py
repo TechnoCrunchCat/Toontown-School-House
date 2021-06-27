@@ -1,3 +1,5 @@
+import random
+
 from toontown.coghq.SpecImports import *
 GlobalEntities = {1000: {'type': 'levelMgr',
         'name': 'LevelMgr',
@@ -63,7 +65,7 @@ GlobalEntities = {1000: {'type': 'levelMgr',
          'pos': Point3(19.0611743927, -20.78266716, 0.0),
          'hpr': Vec3(160.016891479, 0.0, 0.0),
          'scale': Vec3(1.0, 1.0, 1.0),
-         'rewardPerGrab': 8,
+         'rewardPerGrab': random.choice([7, 8, 9, 10, 11, 12, 13, 14]),
          'rewardPerGrabMax': 0},
  10001: {'type': 'model',
          'name': '<unnamed>',
