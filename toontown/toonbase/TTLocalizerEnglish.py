@@ -2750,7 +2750,7 @@ SuitAttackTaunts = {'Audit': ["I believe your books don't balance.",
               "You aren't above the law!",
               'There should be a law against you.',
               "There's no ex post facto with me!",
-              "The opinions expressed in this attack are not those of Toontown Online.",
+              "The opinions expressed in this attack are not those of Toontown Worldwide.",
               'We cannot be held responsible for damages suffered in this attack.',
               'Your results for this attack may vary.',
               'This attack is void where prohibited.',
@@ -3072,6 +3072,16 @@ SuitAttackTaunts = {'Audit': ["I believe your books don't balance.",
                 'Your finances have taken a decline.',
                 'I foresee a definite downturn.',
                 "It's a reversal of fortune."],
+ 'ThrowBook':  ["TESTReplacethislinewithsomethingbetterTEST",
+                'TESTReplacethislinewithsomethingbetterTEST',
+                'TESTReplacethislinewithsomethingbetterTEST',
+                'TESTReplacethislinewithsomethingbetterTEST',
+                "TESTReplacethislinewithsomethingbetterTEST",
+                "TESTReplacethislinewithsomethingbetterTEST",
+                "TESTReplacethislinewithsomethingbetterTEST",
+                'TESTReplacethislinewithsomethingbetterTEST',
+                'TESTReplacethislinewithsomethingbetterTEST',
+                "TESTReplacethislinewithsomethingbetterTEST"],
  'WriteOff': ['Let me increase your losses.',
               "Let's make the best of a bad deal.",
               'Time to balance the books.',
@@ -4113,7 +4123,7 @@ LauncherPhaseNames = {0: 'Initialization',
  12: Bossbot + ' HQ',
  13: 'Parties'}
 LauncherProgress = '%(name)s (%(current)s of %(total)s)'
-LauncherStartingMessage = "Starting Toontown Online... "
+LauncherStartingMessage = "Starting Toontown Worldwide... "
 LauncherDownloadFile = 'Downloading update for ' + LauncherProgress + '...'
 LauncherDownloadFileBytes = 'Downloading update for ' + LauncherProgress + ': %(bytes)s'
 LauncherDownloadFilePercent = 'Downloading update for ' + LauncherProgress + ': %(percent)s%%'
@@ -4129,7 +4139,7 @@ LauncherDownloadServerFileList = 'Updating Toontown...'
 LauncherCreatingDownloadDb = 'Updating Toontown...'
 LauncherDownloadClientFileList = 'Updating Toontown...'
 LauncherFinishedDownloadDb = 'Updating Toontown... '
-LauncherStartingGame = 'Starting Toontown Online...'
+LauncherStartingGame = 'Starting Toontown Worldwide...'
 LauncherRecoverFiles = 'Updating Toontown. Recovering files...'
 LauncherCheckUpdates = 'Checking for updates for ' + LauncherProgress
 LauncherVerifyPhase = 'Updating Toontown...'
@@ -4145,14 +4155,14 @@ AvatarChoiceNameReview = 'Under\nReview'
 AvatarChoiceNameYourToon = 'Name\nYour Toon!'
 AvatarChoiceDeletePasswordText = 'Careful! This will delete %s forever.  To delete this Toon, enter your password.'
 AvatarChoiceDeleteConfirmText = 'Careful! This will delete %(name)s forever.  If you are sure you want to do this, type "%(confirm)s" and click OK.'
-AvatarChoiceDeleteConfirmUserTypes = 'delete'
+AvatarChoiceDeleteConfirmUserTypes = '123'
 AvatarChoiceDeletePasswordTitle = 'Delete Toon?'
 AvatarChoicePassword = 'Password'
 AvatarChoiceDeletePasswordOK = lOK
 AvatarChoiceDeletePasswordCancel = lCancel
 AvatarChoiceDeleteWrongPassword = 'That password does not seem to match.  To delete this Toon, enter your password.'
 AvatarChoiceDeleteWrongConfirm = 'You did not type the right thing.  To delete %(name)s, type "%(confirm)s" and click OK.  Do not type the quotation marks.  Click Cancel if you have changed your mind.'
-AvatarChooserPickAToon = 'Pick  A  Toon  To  Play'
+AvatarChooserPickAToon = 'Welcome  to  Toontown  Worldwide!'
 AvatarChooserQuit = lQuit
 DateOfBirthEntryMonths = ['Jan',
  'Feb',
@@ -4694,9 +4704,9 @@ OptionsPageToggleOff = 'Turn Off'
 OptionsPageChange = 'Change'
 OptionsPageDisplaySettings = 'Display: %(screensize)s, %(api)s'
 OptionsPageDisplaySettingsNoApi = 'Display: %(screensize)s'
-OptionsPageExitConfirm = 'Exit Toontown?'
+OptionsPageExitConfirm = 'Exit Toontown Worldwide?'
 DisplaySettingsTitle = 'Display Settings'
-DisplaySettingsIntro = 'The following settings are used to configure the way Toontown is displayed on your computer.  It is probably not necessary to adjust these unless you are experiencing a problem.'
+DisplaySettingsIntro = 'The following settings are used to configure the way Toontown is displayed on your computer. It is probably not necessary to adjust these unless you are experiencing a problem.'
 DisplaySettingsIntroSimple = 'You may adjust the screen resolution to a higher value to improve the clarity of text and graphics in Toontown, but depending on your graphics card, some higher values may make the game run less smoothly or may not work at all.'
 DisplaySettingsApi = 'Graphics API:'
 DisplaySettingsResolution = 'Resolution:'
@@ -4704,7 +4714,7 @@ DisplaySettingsWindowed = 'In a window'
 DisplaySettingsFullscreen = 'Full screen'
 DisplaySettingsEmbedded = 'In the browser'
 DisplaySettingsApply = 'Apply'
-DisplaySettingsCancel = lCancel
+DisplaySettingsCancel = 'Cancel'
 DisplaySettingsApplyWarning = 'When you press OK, the display settings will change.  If the new configuration does not display properly on your computer, the display will automatically return to its original configuration after %s seconds.'
 DisplaySettingsAccept = 'Press OK to keep the new settings, or Cancel to revert.  If you do not press anything, the settings will automatically revert back in %s seconds.'
 DisplaySettingsRevertUser = 'Your previous display settings have been restored.'
@@ -8301,6 +8311,28 @@ TIP_GOLF = 7
 TipTitle = 'TOON TIP:'
 TipDict = {TIP_NONE: ('',),
  TIP_GENERAL: ('Quickly check your ToonTask progress by holding down the "End" key.',
+               'Murder your wife and children discreetly by leaving the gas on the kickten stove on overnight.',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
+               'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test',
                'Quickly check your Gag page by holding down the "Home" key.',
                'Open your Friends List by pressing the "F7" key.',
                'Open or close your Shticker Book by pressing the "F8" key.',

@@ -186,8 +186,8 @@ class TutorialManagerAI(DistributedObjectAI):
         av.b_setQuests([])
         av.b_setQuestHistory([])
         av.b_setRewardHistory(0, [])
-        av.b_setHp(15)
-        av.b_setMaxHp(15)
+        av.b_setHp(100)
+        av.b_setMaxHp(100)
 
         av.inventory.zeroInv()
         if av.inventory.numItem(ToontownBattleGlobals.THROW_TRACK, 0) == 0:

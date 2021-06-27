@@ -18,10 +18,25 @@ class DDPlayground(Playground.Playground):
         self.activityFsm = ClassicFSM.ClassicFSM('Activity', [State.State('off', self.enterOff, self.exitOff, ['OnBoat']), State.State('OnBoat', self.enterOnBoat, self.exitOnBoat, ['off'])], 'off', 'off')
         self.activityFsm.enterInitialState()
 
-    def load(self):
+    def load(self): # everything loads with this function bracket
         Playground.Playground.load(self)
+        self.piano = loader.loadModel('phase_6/models/props/piano') # This lines loads our piano prop
+        self.piano.reparentTo(render) # This line makes our piano prop a child node to the render
+        self.piano.setPos(0, 0, 10) # This line sets the coordinates of our piano prop to 0x 0y and 10z
 
-    def unload(self):
+        self.piano.setHpr(250, 15, 10) #This line sets the roation of the pinao #firstvalue-leftandright,secondvalue-upanddown,thirdvalue-plane
+        self.piano.setColorScale(1, 0, 0, 1) # This line sets the color of the piano #RGB+Transparency vaule
+
+        self.apple = loader.loadModel('phase_4/models/minigames/apple')
+        self.apple.reparentTo(self.piano) #This line makes our apple prop a child node of the piano prop #This means any child nodes of the pinao prop will also have the exact same attrutbutes as the parent node
+        self.apple.setScale(5) # This line sets the scale of the apple
+
+    def unload(self): # everything unloads with this function bracket, everything unloads when you leave
+        self.piano.removeNode() # This line tells the game to ready the pinao child node to be unload when called to
+        del self.piano # This tells the ready piano node to unload itself
+        self.apple.removeNode()
+        del self.apple
+
         del self.activityFsm
         Playground.Playground.unload(self)
 

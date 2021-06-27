@@ -907,10 +907,11 @@ class DistributedBossCog(DistributedAvatar.DistributedAvatar, BossCog.BossCog):
         if not getattr(localAvatar.controlManager.currentControls, 'isAirborne', 0):
             self.zapLocalToon(ToontownGlobals.BossCogAreaAttack)
 
-    def loadEnvironment(self):
-        self.elevatorMusic = base.loader.loadMusic('phase_7/audio/bgm/tt_elevator.ogg')
-        self.stingMusic = base.loader.loadMusic('phase_7/audio/bgm/encntr_suit_winning_indoor.ogg')
-        self.battleOneMusic = base.loader.loadMusic('phase_3.5/audio/bgm/encntr_general_bg.ogg')
+    def loadEnvironment(self): #This might be how to custom boss cog battle music
+        self.elevatorMusic = base.loader.loadMusic('phase_7/audio/bgm/Toontown - Elevator Theme.ogg')
+        self.stingMusic = base.loader.loadMusic('phase_9/audio/bgm/Cog Building - Top Floor.ogg') #changed
+        self.battleOneMusic = base.loader.loadMusic('phase_3.5/audio/bgm/encntr_general_bg.ogg') #- generic cog battle theme that plays in bosses
+        self.cjbattleoneMusic = base.loader.loadMusic('phase_9/audio/bgm/CustomCjCogBattle1Music') #Cj Cog battle music
         self.battleThreeMusic = base.loader.loadMusic('phase_7/audio/bgm/encntr_suit_winning_indoor.ogg')
         self.epilogueMusic = base.loader.loadMusic('phase_9/audio/bgm/encntr_hall_of_fame.ogg')
 

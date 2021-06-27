@@ -24,7 +24,7 @@ class BossbotCogHQLoader(CogHQLoader.CogHQLoader):
             state = self.fsm.getStateNamed(stateName)
             state.addTransition('countryClubInterior')
 
-        self.musicFile = random.choice(['phase_12/audio/bgm/Bossbot_Entry_v1.ogg', 'phase_12/audio/bgm/Bossbot_Entry_v2.ogg', 'phase_12/audio/bgm/Bossbot_Entry_v3.ogg'])
+        self.musicFile = random.choice(['phase_12/audio/bgm/Bossbot_Entry_v1_new.ogg', 'phase_12/audio/bgm/Bossbot_Entry_v2_new.ogg', 'phase_12/audio/bgm/Bossbot_Entry_v3_new.ogg', 'phase_12/audio/bgm/Bossbot_Entry_v4_new.ogg'])
         self.cogHQExteriorModelPath = 'phase_12/models/bossbotHQ/CogGolfHub'
         self.factoryExteriorModelPath = 'phase_11/models/lawbotHQ/LB_DA_Lobby'
         self.cogHQLobbyModelPath = 'phase_12/models/bossbotHQ/CogGolfCourtyard'
@@ -34,6 +34,14 @@ class BossbotCogHQLoader(CogHQLoader.CogHQLoader):
     def load(self, zoneId):
         CogHQLoader.CogHQLoader.load(self, zoneId)
         Toon.loadBossbotHQAnims()
+        self.BBHQcrate = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2')
+        self.BBHQcrate.reparentTo(render)
+        self.BBHQcrate.setPosHpr(-15.296, 88.843, 0.025, 71.424, 0, 0)
+
+
+        self.BBHQcrate1 = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2')
+        self.BBHQcrate1.reparentTo(self.BBHQcrate)
+        self.BBHQcrate1.setPosHpr(-10.296, 88.843, 0.025, 71.424, 0, 0)
 
     def unloadPlaceGeom(self):
         if self.geom:
@@ -82,6 +90,10 @@ class BossbotCogHQLoader(CogHQLoader.CogHQLoader):
     def unload(self):
         CogHQLoader.CogHQLoader.unload(self)
         Toon.unloadSellbotHQAnims()
+        self.BBHQcrate.removeNode()
+        del self.BBHQcrate
+        self.BBHQcrate1.removeNode()
+        del self.BBHQcrate1
 
     def enterStageInterior(self, requestStatus):
         self.placeClass = StageInterior.StageInterior

@@ -24,7 +24,7 @@ class EstateLoader(SafeZoneLoader.SafeZoneLoader):
          State.State('house', self.enterHouse, self.exitHouse, ['quietZone']),
          State.State('quietZone', self.enterQuietZone, self.exitQuietZone, ['house', 'estate']),
          State.State('final', self.enterFinal, self.exitFinal, ['start'])], 'start', 'final')
-        self.musicFile = 'phase_5.5/audio/bgm/estate_SZ.ogg'
+        self.musicFile = 'phase_5.5/audio/bgm/Toontown - Estate Theme_new.ogg'
         self.activityMusicFile = 'phase_3.5/audio/bgm/TC_SZ_activity.ogg'
         self.dnaFile = 'phase_5.5/dna/estate_1.dna'
         self.safeZoneStorageDNAFile = None

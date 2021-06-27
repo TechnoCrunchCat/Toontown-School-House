@@ -132,11 +132,11 @@ PrivacyPolicyText_Intro = [' ']
 PrivacyPolicyClose = lClose
 SecretFriendsInfoPanelOk = lOK
 SecretFriendsInfoPanelClose = lClose
-SecretFriendsInfoPanelText = ['\nThe Open Chat with True Friends Feature\n\nThe Open Chat with True Friends feature enables a member to chat directly with another member within Toontown Online (the "Service") once the members establish a True Friends connection. Here is a detailed description of the process of creating an Open Chat with True Friends connection between members whom we will call "John" and "Little Cat."\n1. First, John requests a True Friend Code (described below) from within the Service.\n',
+SecretFriendsInfoPanelText = ['\nThe Open Chat with True Friends Feature\n\nThe Open Chat with True Friends feature enables a member to chat directly with another member within Toontown Worldwide (the "Service") once the members establish a True Friends connection. Here is a detailed description of the process of creating an Open Chat with True Friends connection between members whom we will call "John" and "Little Cat."\n1. First, John requests a True Friend Code (described below) from within the Service.\n',
  "\nThen, John's True Friend Code is given to Little Cat outside of the Service. (John's True Friend Code may be communicated to Little Cat either directly by John, or indirectly through John's disclosure of the True Friend Code to another person.)\nLittle Cat submits John's True Friend Code to the Service within 48 hours of the time that John requested the True Friend Code from the Service.\n5. The Service then notifies Little Cat that John has become Little Cat's True Friend.  The Service similarly notifies John that Little Cat has become John's True Friend.\nJohn and Little Cat can now open chat directly with each other until either one chooses to terminate the other as a True Friend.",
  "\nTrue Friends feature by going to the Account Options area within the Service and following the steps set forth there.\n\nA True Friend Code is a computer-generated random code assigned to a particular member. The True Friend Code must be used to activate a True Friend connection within 48 hours of the time that the member requests the True Friend Code; otherwise, the True Friend Code expires and cannot be used.  Moreover, a single True Friend Code can only be used to establish one True Friend connection.  To make additional True Friend connections, a member must request an additional True Friend Code for each additional True Friend.\n\nTrue Friendships do not transfer.  For example, if Little Cat becomes a True Friend of John, and John becomes a True Friend of Jesse, Little Cat does not automatically become Jesse's True Friend.  In order for Little Cat and Jesse to\n",
  '\nbecome True Friends, one of them must request a new True Friend Code from the Service and communicate it to the other.\n\nTrue Friends communicate with one another in a free-form interactive open chat.  The content of this chat is directly entered by the participating member and is processed through the Service, which is operated by independent server hosters.  While we advise members not to exchange personal information such as first and last names, e-mail addresses, postal addresses, or phone numbers while using Open Chat with True Friends, we cannot guarantee that such exchanges of personal information will not happen. Although the True Friends chat is automatically filtered for most bad words, Open Chat with True Friends may be moderated, and server operators reserve the right to moderate any part of the Service that they,\n',
- "\nin their sole and absolute discretion, deem necessary. However, because Open Chat with True Friends will not always be moderated, we strongly encourage parents to supervise their child or children while they play in the Service. By enabling the Open Chat with True Friends feature, the user acknowledges that there are some risks inherent in the Open Chat with True Friends feature and that they have been informed of, and agree to accept, any such risks, whether foreseeable or otherwise. \n\nToontown Online does not use the content of True Friends chat for any purpose other than communicating that content to the member's True Friend, and does not disclose that content to any third party except: (1) if required by law, for example, to comply with a court order or subpoena;\n",
+ "\nin their sole and absolute discretion, deem necessary. However, because Open Chat with True Friends will not always be moderated, we strongly encourage parents to supervise their child or children while they play in the Service. By enabling the Open Chat with True Friends feature, the user acknowledges that there are some risks inherent in the Open Chat with True Friends feature and that they have been informed of, and agree to accept, any such risks, whether foreseeable or otherwise. \n\nToontown Worldwide does not use the content of True Friends chat for any purpose other than communicating that content to the member's True Friend, and does not disclose that content to any third party except: (1) if required by law, for example, to comply with a court order or subpoena;\n",
  "\nor, (2) to protect the safety and security of Members of the Service and the Service itself. In accordance with the Children's Online Privacy Protection Act, we are prohibited from conditioning, and do not condition, a child's participation in any activity (including Open Chat with True Friends) on the child's disclosing more personal information than is reasonably necessary to participate in such activity. By enabling the Open Chat with True Friends feature, you acknowledge that there are some risks inherent in the ability of members to open chat with one another through the Open Chat with True Friends feature, and that you have been informed of, and agree to accept, any such risks, whether foreseeable or otherwise.\n"]
 LeaveToPay = 'Click Purchase to exit the game and buy a Membership'
 LeaveToPayYes = 'Purchase'
@@ -184,11 +184,11 @@ CRBootedReasons = {
  BootedUnexpectedProblem: 'An unexpected problem has occurred.  Your connection has been lost, but you should be able to connect again and go right back into the game.',
  BootedLoggedInElsewhere: 'You have been disconnected because someone else just logged in using your account on another computer.',
  BootedKeyboardChatAuth: 'You have been disconnected because of a problem with your authorization to use keyboard chat.',
- BootedConnectionKilled: 'There has been an unexpected problem logging you in. If this issue persists, please contact Toontown Online support.',
+ BootedConnectionKilled: 'There has been an unexpected problem logging you in. If this issue persists, please contact Toontown Worldwide support.',
  BootedVersionMismatch: 'You are running a different version of the game than the server host. If you have just updated your game, please ask the server host to update and restart their server.',
  BootedFileMismatch: 'Your installed files appear to be invalid.  If you are getting this error repeatedly, the server host is likely running a different version of the game.',
  BootedNoAdminPrivileges: 'You are not authorized to use administrator privileges.',
- BootedToonIssue: 'A problem has occurred with your Toon.  If this issue persists, please contact Toontown Online support.',
+ BootedToonIssue: 'A problem has occurred with your Toon.  If this issue persists, please contact Toontown Worldwide support.',
  BootedKickedForMaintenance: 'You have been logged out by an administrator working on the servers.',
  BootedBanned: "There has been a reported violation of this server's rules connected to '%(name)s'. You have been banned.",
  BootedDistrictReset: 'The district you were playing on has been reset.  Everyone who was playing on that district has been disconnected.  However, you should be able to connect again and go right back into the game.',
@@ -293,7 +293,7 @@ FriendSecretNeedsPasswordWarningOK = lOK
 FriendSecretNeedsPasswordWarningCancel = lCancel
 FriendSecretNeedsPasswordWarningWrongUsername = "That's not the correct username.  Please enter the username of the parental account.  This is not the same username used to play the game."
 FriendSecretNeedsPasswordWarningWrongPassword = "That's not the correct password.  Please enter the password of the parental account.  This is not the same password used to play the game."
-FriendSecretIntro = "If you are playing Toontown Online with someone you know in the real world, you can become True Friends.  You can chat using the keyboard with your True Friends.  Other Toons won't understand what you're saying.\n\nYou do this by getting a True Friend Code.  Tell the True Friend Code to your friend, but not to anyone else.  When your friend types in your True Friend Code on their screen, you'll be True Friends in Toontown!"
+FriendSecretIntro = "If you are playing Toontown Worldwide with someone you know in the real world, you can become True Friends.  You can chat using the keyboard with your True Friends.  Other Toons won't understand what you're saying.\n\nYou do this by getting a True Friend Code.  Tell the True Friend Code to your friend, but not to anyone else.  When your friend types in your True Friend Code on their screen, you'll be True Friends in Toontown!"
 FriendSecretGetSecret = 'Get a True Friend Code'
 FriendSecretEnterSecret = 'If you have a True Friend Code from someone you know, type it here.'
 FriendSecretOK = lOK
@@ -511,13 +511,30 @@ EmoteFuncDict = {'Wave': 0,
  'Sing Note F': 31,
  'Sing Note G2': 32}
 SuitBrushOffs = {'f': ["I'm late for a meeting."],
- 'p': ['Push off.'],
+  'p': ['Push off.'],
  'ym': ['Yes Man says NO.'],
+ 'bw': ['As a man of law, id advice you it would be in your best interest to get out of my hair immediately.', 'How about you play public defender somewhere else, toon?', 'You realize that corporate espionage is a death penalty crime, right toon?', "This is definetly going on your public record", "I'm about to strike you off the record"],
+ 'le': ['You realize that corporate espionage is a death penalty crime, right toon?', "I'll consider your lack of obedience as a admission of guilt", "Looks like someone just signed off on their own death warrant", "This is definetly going on your public record", "I'm about to strike you off the record"],
  None: ["It's my day off.",
         "I believe you're in the wrong office.",
         'Have your people call my people.',
         "You're in no position to meet with me.",
-        'Talk to my assistant.']}
+        'Talk to my assistant.',
+        "Bug off please.",
+        "Fuck off please.",
+        "Fuck off please.",
+        "Fuck off please.",
+        "Fuck off please. Thank you.",
+        "Fuck off please.",
+        "Fuck off please.",
+        "Fuck off please.",
+        "Fuck off please.",
+        "Fuck off please.",
+        "Fuck off please.",
+        "Fuck off please.",
+        "Fuck off please.",
+        "Fuck off please.",
+        "Fuck off please.",]}
 SuitFaceoffTaunts = {'b': ['Do you have a donation for me?',
        "I'm going to make you a sore loser.",
        "I'm going to leave you high and dry.",
@@ -655,7 +672,10 @@ SuitFaceoffTaunts = {'b': ['Do you have a donation for me?',
         "I'm so glad you're on time for your cut.",
         "You're in big trouble.",
         "I'm going to wig out on you.",
-        "I'm a big deal little toon."],
+        "I'm a big deal little toon.",
+        "Your in the big leagues now, toon",
+        "Between having docket duty and having to teach the likes of you the true meaning of the law, busting open cases seems likes a chore compared to the fun i'm about to have with you.",
+        "Looks like you've landed yourself in a real hairy situation"],
  'le': ["Careful, my legal isn't very tender.",
         'I soar, then I score.',
         "I'm bringing down the law on you.",
@@ -1087,12 +1107,18 @@ SpeedChatStaticTextToontown = {100: 'Hi!',
  1604: 'One more?',
  1605: 'Play again?',
  1606: "Let's play again.",
- 1700: "Let's split up.",
- 1701: "Let's stay together.",
- 1702: "Let's battle the Cogs.",
- 1703: 'Step on the switch.',
- 1704: 'Go through the door.',
- 1803: "I'm in the Front Entrance.",
+ 1700: "Let's split up.", #---------------------[Start of Factory Specific Speedchat Phrases]---------------------#
+ 1701: "Let's stay together.", #(GENERAL) Factory Zone Specific Speedchat Phrases
+ 1702: "Let's battle the Cogs.", #(GENERAL) Factory Zone Specific Speedchat Phrases
+ 1703: 'Step on the switch.', #(GENERAL) Factory Zone Specific Speedchat Phrases
+ 1704: 'Go through the door.', #(GENERAL) Factory Zone Specific Speedchat Phrases
+ 1705: "Which factory route are we doing?", #(GENERAL) Factory Zone Specific Speedchat Phrases
+ 1706: "We're doing a long route.", #(GENERAL) Factory Zone Specific Speedchat Phrases
+ 1707: "We're doing a short route.", #(GENERAL) Factory Zone Specific Speedchat Phrases
+ 1708: "Let's do a long route!", #(GENERAL) Factory Zone Specific Speedchat Phrases
+ 1709: "Let's do a short route!", #(GENERAL) Factory Zone Specific Speedchat Phrases
+ 1710: "I'm fine with whatever route.", #(GENERAL) Factory Zone Specific Speedchat Phrases
+ 1803: "I'm in the Front Entrance.", #(GENERAL) Factory Zone Specific Speedchat Phrases
  1804: "I'm in the Lobby.",
  1805: "I'm in the hallway outside the Lobby.",
  1806: "I'm in the hallway outside the Lobby.",
@@ -1129,7 +1155,7 @@ SpeedChatStaticTextToontown = {100: 'Hi!',
  1841: "I'm on top of the East Silo.",
  1860: "I'm on the West Silo Elevator.",
  1861: "I'm on the East Silo Elevator.",
- 1903: "Let's meet in the Front Entrance.",
+ 1903: "Let's meet in the Front Entrance.", #(MEET) Factory Zone Specific Speedchat Phrases
  1904: "Let's meet in the Lobby.",
  1905: "Let's meet in the hallway outside the Lobby.",
  1906: "Let's meet in the hallway outside the Lobby.",
@@ -1165,7 +1191,7 @@ SpeedChatStaticTextToontown = {100: 'Hi!',
  1940: "Let's meet on top of the West Silo.",
  1941: "Let's meet on top of the East Silo.",
  1960: "Let's meet on the West Silo Elevator.",
- 1961: "Let's meet on the East Silo Elevator.",
+ 1961: "Let's meet on the East Silo Elevator.",  #(MEET) Factory Zone Specific Speedchat Phrases ------------------------------#End of Factory Specific Speedchat Phrases--------------------------------
  2000: 'Purple',
  2001: 'Blue',
  2002: 'Cyan',
